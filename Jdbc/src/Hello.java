@@ -87,7 +87,6 @@ public class Hello {
 	        	 while(resultSet1.next()) {
 						
 	  				System.out.println(resultSet1.getInt(1)+ " " + resultSet1.getString(2)+ " " + resultSet1.getInt(3)+" "+ resultSet1.getString(4)+" "+ resultSet1.getString(5)+" "+resultSet1.getInt(6));
-	  			
 				  }
 				
 			}
