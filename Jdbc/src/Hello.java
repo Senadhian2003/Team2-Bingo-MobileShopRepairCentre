@@ -59,7 +59,7 @@ public class Hello {
   			
 			case 2:
 			{
-			 
+			  // Upadte the cost 
 			  System.out.println("Enter the id to update:");
   			  int x=sc.nextInt();
   			  System.out.println("Enter the cost");
@@ -73,6 +73,7 @@ public class Hello {
   			}
 			case 3:
 			{
+				//Printing details of customer within given time line
 				String lachi=sc.next();
 				String mola=sc.next();
 				
@@ -85,6 +86,7 @@ public class Hello {
 			}
 			case 4:
 			{
+				//Printing Details of all the customers
 				ResultSet resultSet1 = statement.executeQuery("select * from first");
 	        	 while(resultSet1.next()) {
 						
