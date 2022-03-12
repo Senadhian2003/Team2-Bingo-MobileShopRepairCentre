@@ -64,7 +64,7 @@ public class Hello {
   			  int c=sc.nextInt();
   			  String query2 = "UPDATE `first` SET `cost`='"+c+"' WHERE `token`="+x+"";
      	      statement.executeUpdate(query2);
-     	      System.out.println("Updated successfully.....");
+     	      System.out.println("Updated successfully......");
      	      break;
   				
   				
