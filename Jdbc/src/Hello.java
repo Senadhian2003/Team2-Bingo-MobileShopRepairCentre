@@ -21,7 +21,7 @@ public class Hello {
 			
 
 	         Date thisDate =new Date();
-	         SimpleDateFormat dateForm= new SimpleDateFormat("YYYY-MM-dd");
+	         SimpleDateFormat dateForm= new SimpleDateFormat("YYYY-MM-dd"); //For Getting Current Date
 	        
 	
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -38,6 +38,7 @@ public class Hello {
 			{
 			case 1:
 			{
+				//Generating token number and customer details
 				int token=(int)Math.floor(Math.random()*10000);
 				System.out.println("Your Tokennumber is"+token);
 				System.out.print ("enter Your name:");
@@ -58,6 +59,7 @@ public class Hello {
   			
 			case 2:
 			{
+			 
 			  System.out.println("Enter the id to update:");
   			  int x=sc.nextInt();
   			  System.out.println("Enter the cost");
