@@ -10,9 +10,9 @@ public class Hello {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException{
 		
-		String url="jdbc:mysql://sql3.freesqldatabase.com:3306/sql3476613";
-		String username="sql3476613";
-		String password="wnPBt3gz2n";
+		String url="jdbc:mysql://sql3.freesqldatabase.com:3306/sql3478728";
+		String username="sql3478728";
+		String password="n8ytZFMqEu";
 		
 		
 		try {
@@ -40,9 +40,9 @@ public class Hello {
 			{
 				int token=(int)Math.floor(Math.random()*10000);
 				System.out.println("Your Tokennumber is"+token);
-				System.out.print ("enter Your name:");
+				System.out.print ("Enter Your name:");
 				String name=sc.next();
-				System.out.print ("enter Mobile no:");
+				System.out.print ("Enter Mobile no:");
 				int no=sc.nextInt();
 				
 				
@@ -71,10 +71,10 @@ public class Hello {
   			}
 			case 3:
 			{
-				String lachi=sc.next();
-				String mola=sc.next();
+				String s=sc.next();
+				String e=sc.next();
 				
-				ResultSet resultSet = statement.executeQuery("select * from `first` where `date` between '"+lachi+"' and '"+mola+"' ");
+				ResultSet resultSet = statement.executeQuery("select * from `first` where `date` between '"+s+"' and '"+e+"' ");
 	        	 while(resultSet.next()) {
 						
 	  				System.out.println(resultSet.getInt(1)+ " " + resultSet.getString(2)+ " " + resultSet.getInt(3)+" "+ resultSet.getString(4)+" "+ resultSet.getString(5));
@@ -112,7 +112,6 @@ public class Hello {
 		catch(Exception e) {
 			
 			System.out.println(e);
-			//errors
 		}
 		
 
