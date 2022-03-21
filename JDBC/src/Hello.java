@@ -45,12 +45,16 @@ public class Hello {
 				System.out.print ("Enter Mobile no : ");
 				String no=sc.next();
 				
+				System.out.println("Enter Mobile model : ");
+				sc.nextLine();
+				String mo=sc.nextLine();
+				
 				
 				System.out.print ("Enter your problem in detail : ");
-				sc.nextLine();
+				
 				String prob=sc.nextLine();
 				
-				String query1 = "INSERT INTO `first`(`token`, `name`, `mobile`, `date`, `descrip`) VALUES ("+token+",'"+name+"',"+no+",'"+dateForm.format(thisDate)+"','"+prob+"')";
+				String query1 = "INSERT INTO `first`(`token`, `name`, `mobile`,`model`, `date`, `descrip`) VALUES ("+token+",'"+name+"',"+no+",'"+mo+"','"+dateForm.format(thisDate)+"','"+prob+"')";
          	    statement.executeUpdate(query1);
          	    System.out.println("Data added successfully....");
          	    break;
@@ -71,13 +75,16 @@ public class Hello {
   			}
 			case 3:
 			{
+				System.out.println("Enter From Date : ");
 				String s=sc.next();
+				System.out.println("Enter To Date : ");
 				String e=sc.next();
 				
 				ResultSet resultSet = statement.executeQuery("select * from `first` where `date` between '"+s+"' and '"+e+"' ");
 	        	 while(resultSet.next()) {
 						
-	  				System.out.println(resultSet.getInt(2)+ " " + resultSet.getString(3)+ " " + resultSet.getString(4)+" "+ resultSet.getString(5)+" "+ resultSet.getInt(6));
+	        		 System.out.println("\nToken no : "+resultSet.getInt(1)+ " \n" +"Name : "+ resultSet.getString(2)+ "\n" + "Mobile no : "+ resultSet.getString(3)+"\n"+ "Model : "+ resultSet.getString(4)+ "\n" + "Date : "+ resultSet.getString(5)+"\n"+"Description : "+ resultSet.getString(6)+" \n"+ "Cost Involved : "+ resultSet.getInt(7)+ "\n");
+	        		 System.out.println("----------------------------------------------------------------------------------\n");
 	  			
 				  }
 	        	 break;
@@ -87,8 +94,10 @@ public class Hello {
 				ResultSet resultSet1 = statement.executeQuery("select * from first");
 	        	 while(resultSet1.next()) {
 						
-	        		 System.out.println(resultSet1.getInt(1)+ " " +resultSet1.getString(2)+ " " + resultSet1.getString(3)+ " " + resultSet1.getString(4)+" "+ resultSet1.getString(5)+" "+ resultSet1.getInt(6));
-				  }
+	        		 System.out.println("\nToken no : "+resultSet1.getInt(1)+ " \n" +"Name : "+ resultSet1.getString(2)+ "\n" + "Mobile no : "+ resultSet1.getString(3)+"\n"+ "Model : "+ resultSet1.getString(4)+ "\n" + "Date : "+ resultSet1.getString(5)+"\n"+"Description : "+ resultSet1.getString(6)+" \n"+ "Cost Involved : "+ resultSet1.getInt(7)+ "\n");
+	        		 System.out.println("----------------------------------------------------------------------------------\n");
+	        	 
+	        	 }
 	        	 break;
 				
 			}
