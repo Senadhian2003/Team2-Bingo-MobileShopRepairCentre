@@ -10,9 +10,9 @@ public class Hello {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException{
 		
-		String url="jdbc:mysql://sql3.freesqldatabase.com:3306/sql3478728";
-		String username="sql3478728";
-		String password="n8ytZFMqEu";
+		String url="jdbc:mysql://sql3.freesqldatabase.com:3306/sql3480463";
+		String username="sql3480463";
+		String password="QT35UGBk7I";
 		
 		
 		try {
@@ -87,7 +87,7 @@ public class Hello {
 				ResultSet resultSet1 = statement.executeQuery("select * from first");
 	        	 while(resultSet1.next()) {
 						
-	        		 System.out.println(resultSet1.getString(1)+ " " +resultSet1.getInt(2)+ " " + resultSet1.getString(3)+ " " + resultSet1.getString(4)+" "+ resultSet1.getString(5)+" "+ resultSet1.getInt(6));
+	        		 System.out.println(resultSet1.getInt(1)+ " " +resultSet1.getString(2)+ " " + resultSet1.getString(3)+ " " + resultSet1.getString(4)+" "+ resultSet1.getString(5)+" "+ resultSet1.getInt(6));
 				  }
 	        	 break;
 				
